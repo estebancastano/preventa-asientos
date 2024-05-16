@@ -10,7 +10,7 @@
     gap: 20px;
 }
 
-.title {
+.title-home {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -52,7 +52,7 @@
     transition: all 0.3s ease 0s;
 }
 
-.principal-text-p{
+.principal-text-p {
     margin-bottom: 50px;
 }
 
@@ -118,7 +118,7 @@ button:active {
         justify-content: center;
     }
 
-    .title {
+    .title-home {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -143,14 +143,167 @@ button:active {
     }
 }
 
-@media screen and (max-width: 400px) {
-    .title {
-        font-size: 15px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin: 5px 0px 10px 0px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
+/*form register*/
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    justify-content: center;
+}
+
+.title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+}
+
+.title::before {
+    width: 16px;
+    height: 16px;
+    background-color: royalblue;
+}
+
+.title::after {
+    width: 16px;
+    height: 16px;
+    animation: pulse 1s linear infinite;
+}
+
+.message,
+.signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: royalblue;
+}
+
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 100%;
+    padding: 10px 0px 20px 0px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    margin-right: 0px;
+}
+
+.form label .input+span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.form label .input:valid+span {
+    color: green;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    width: 100%;
+}
+
+.submit:hover {
+    background-color: rgb(56, 90, 194);
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
     }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    --s: 200px;
+    /* control the size */
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;
+
+    background: repeating-conic-gradient(from 30deg,
+            #0000 0 120deg,
+            var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+        repeating-conic-gradient(from 30deg,
+            var(--c1) 0 60deg,
+            var(--c2) 0 120deg,
+            var(--c3) 0 180deg);
+    background-size: var(--s) calc(var(--s) * 0.577);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
