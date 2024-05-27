@@ -9,41 +9,38 @@
 </head>
 
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
+    <nav class="navbar">
+        <a href="index.html">Inicio</a> 
+        <a href="login.html">Iniciar sesión</a>
     </nav>
     <div class="container">
-        <form class="form">
-            <p class="title">Register </p>
-            <p class="message">Signup now and get full access to our app. </p>
-            <div class="flex">
-                <label>
-                    <input class="input" type="text" placeholder="" required="">
-                    <span>Firstname</span>
-                </label>
+        <form action="" class="form">
+            <h1 class="title">Sign up</h1>
 
-                <label>
-                    <input class="input" type="text" placeholder="" required="">
-                    <span>Lastname</span>
-                </label>
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Email</label>
             </div>
 
-            <label>
-                <input class="input" type="email" placeholder="" required="">
-                <span>Email</span>
-            </label>
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Username</label>
+            </div>
 
-            <label>
-                <input class="input" type="password" placeholder="" required="">
-                <span>Password</span>
-            </label>
-            <label>
-                <input class="input" type="password" placeholder="" required="">
-                <span>Confirm password</span>
-            </label>
-            <button class="submit">Submit</button>
-            <p class="signin">Already have an acount ? <a href="login.html">Signin</a> </p>
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Password</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Confirm Password</label>
+            </div>
+            <div class="submitContainer">
+                <button type="submit" class="submit" value="Sign up">Registrarse</button>
+                <p class="signin">¿Ya estás registrado? <a href="login.html">Iniciar sesión</a></p>
+            </div>
+            
         </form>
     </div>
 </body>
