@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="register.html">Registrarse</a>
     </nav>
-    <div class="container">
-        <form class="form">
+    <div class="container ">
+        <form class="form padding">
             <p class="title">Sign in </p>
             <p class="message">Signin on app. </p>
-            
 
-            <label>
-                <input class="input" type="email" placeholder="" required="">
-                <span>Email</span>
-            </label>
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Email</label>
+            </div>
 
-            <label>
-                <input class="input" type="password" placeholder="" required="">
-                <span>Password</span>
-            </label>
-            
-            <button class="submit">Login</button>
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Password</label>
+            </div>
+
+            <div class="submitContainer">
+                <button class="submit">Iniciar sesión</s></button>
             <p class="signin">¿No te has registrado? <a href="register.html">Registrarse</a> </p>
+            </div>
+            
         </form>
     </div>
 </body>
+
 </html>
